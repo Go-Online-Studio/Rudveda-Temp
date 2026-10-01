@@ -1,0 +1,1502 @@
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url('../fonts/LibreFranklin-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url('../fonts/LibreFranklin-Bold.woff2') format('woff2'),
+      url('../fonts/LibreFranklin-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TAN - PEARL';
+  src: url('../fonts/TAN-PEARL-Regular.woff2') format('woff2'),
+      url('../fonts/TAN-PEARL-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+#main-header,
+.secH {
+  position: relative;
+}
+
+
+
+.miniHeader {
+  overflow: hidden;
+}
+
+
+.dropdown-item,
+.fifthH,
+.fourthH {
+  text-transform: capitalize;
+}
+
+
+:root {
+  --primary-color: #8e2de2;      /* Rich Purple (used in the figure) */
+  --secondary-color: #1283c6;    /* Deep Blue (left part of lotus) */
+  --accentColour: #c471ed;       /* Light Magenta-Purple (highlight) */
+  --black: #1d1d1d;
+  --lightBg: #e6ddf0;            /* Very light lavender for background */
+  --lightGrey: #dcd6e6;          /* Soft grey-purple for borders */
+  --fade: #c1ace6;               /* Faded lavender-purple for shadows */
+  --extraLight: #f9f7fc;         /* Almost white with lavender tint */
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Libre Franklin';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+}
+
+.display-2 {
+  font-family: 'TAN - PEARL';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  color: var(--secondary-color);
+  margin-bottom: 16px;
+  line-height: 124px;
+}
+
+
+.secH {
+  font-family: 'TAN - PEARL';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  font-size: 40px;
+  line-height: 70px;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+.therdH {
+  font-family: 'TAN - PEARL';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  font-size: 28px;
+  line-height: 48px;
+  margin: 0 0 20px;
+}
+
+
+
+.fourthH {
+  font-family: 'Libre Franklin';
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  font-size: 20px;
+  line-height: 30px;
+}
+.fifthH {
+  font-family: 'Libre Franklin';
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  font-size: 18px;
+}
+
+
+.copyright b {
+  color: #ffffff;
+  transition: 0.3s ease-in-out;
+}
+.copyright b:hover {
+  color: var(--black);
+}
+
+
+#main-header {
+  transition: 0.5s;
+  z-index: 1055;
+}
+.wrapheder{
+  background-color: var(--lightBg);
+  min-height: 98.59px;
+}
+
+/* Navbar Styling */
+.mynavbar {
+  padding: 8px 0;
+}
+.container-fluid{
+  max-width: 1920px;
+}
+.container-fluid.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.navMenu {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  padding: 0;
+}
+
+.navMenu .navLi {
+  position: relative;
+  list-style: none;
+}
+
+.navLink {
+  font-family: 'Libre Franklin';
+  text-decoration: none;
+  color: var(--accentColour);
+  font-size: 16px;
+  font-weight: bold;
+  padding: 26px 8px;
+  display: block;
+  transition: color 0.3s ease-in-out;
+}
+.bg-light {
+  background-color: var(--lightBg) !important;
+}
+
+.navLink:hover{
+  color: var(--primary-color);
+}
+.navLink.active {
+  color: var(--primary-color);
+}
+.navLink svg{
+  transform: translateY(-2px);
+}
+
+.brandLogo{
+  display: inline-block;
+  padding-right: 10px;
+  width: 80px;
+}
+
+
+.dropdownList .navLink{
+  color: var(--lightBg);
+  padding: 14px 20px;
+  display: block;
+  border-bottom: 1px solid var(--fade);
+  background-color: transparent;
+  font-weight: normal;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.dropdownList .navLink:hover{
+  background-color: var(--fade);
+    color: var(--black);
+}
+
+/* Dropdown Styling */
+.dropdownList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--primary-color);
+  list-style: none;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  padding: 0;
+  box-shadow: 0 4px 18.3px 0 rgba(0, 0, 0, 0.13);
+}
+
+
+.navLi:hover .dropdownList {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdownList .navLi {
+  white-space: nowrap;
+}
+
+
+/* Mobile View */
+@media (max-width: 991px) {
+  .navMenu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: var(--fade);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    padding-top: 60px;
+    transition: right 0.4s ease-in-out;
+    overflow-y: auto;
+  }
+
+  .navLink {
+    font-size: 18px;
+}
+
+  .navMenu.active {
+    right: 0;
+  }
+  .dropdownList .navLi {
+    text-wrap: auto;
+  }
+  .dropdownList {
+    transition: none;
+  }
+  
+/* Hide dropdown by default */
+.dropdownList {
+  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show dropdown when open */
+.dropdownList.open {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  position: static;
+  transform: translateY(0);
+}
+
+/* Ensure SVG has pointer-events to prevent it from triggering parent link */
+.navLi > a > svg {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+
+
+  .navToggle {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+  }
+
+  .nav-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+
+  .btn-nav-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ffffff;
+    transform: rotate(45deg);
+  }
+}
+
+/* Hide toggle button and close button in desktop view */
+@media (min-width: 992px) {
+  .navToggle, .btn-nav-close {
+    display: none;
+  }
+}
+
+.sticky-header {
+  position: fixed;
+  top: -112.48px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.24);
+  transition: top 0.5s;
+  animation: 0.5s ease-in-out both slideDown;
+}
+
+@keyframes slideDown {
+  0% {
+    position: fixed;
+    top: -112.48px;
+  }
+  100% {
+    position: fixed;
+    top: 0;
+  }
+}
+.headerAnimate {
+  animation: 0.5s ease-in-out both slideUp;
+}
+@keyframes slideUp {
+  0% {
+    top: 50.48px;
+    position: relative;
+  }
+  100% {
+    top: 0;
+  }
+}
+.sticky-header.visible {
+  top: 0;
+}
+
+
+
+/* banner css start */
+#ca1.owl-carousel .bannerCard,
+.content {
+  opacity: 0;
+}
+.Banner .owl-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  pointer-events: none;
+}
+.Banner .owl-nav button {
+  pointer-events: initial;
+  background-color: var(--skyblue) !important;
+  line-height: 1.25;
+  color: var(--lightGrey) !important;
+}
+.Banner .owl-nav button:hover {
+  background-color: var(--green) !important;
+}
+.Banner .owl-nav button span {
+  display: inline-block;
+  transform: translateY(-4px);
+}
+.Banner .owl-carousel .owl-nav button.owl-next,
+.Banner .owl-carousel .owl-nav button.owl-prev {
+  padding: 0 15px !important;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.3s ease-in-out;
+}
+.Banner .owl-nav .owl-prev i {
+  margin-right: 10px;
+}
+.Banner .owl-nav .owl-next i {
+  margin-left: 10px;
+}
+.Banner .therdH {
+  font-weight: 400;
+}
+.container-fluid {
+  max-width: 1780px;
+}
+.Banner .owl-dots {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+}
+
+.Banner .owl-dots button.owl-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  display: inline-block;
+  background: #ffffff79;
+  margin: 4px 0;
+}
+.Banner .owl-dots button.owl-dot.active {
+  background-color: #fff;
+}
+.Banner .owl-dots button.owl-dot:focus {
+  outline: 0;
+}
+#ca1.owl-carousel .item {
+  padding: 80px 12px;
+  height: calc(100vh - 98.6px);
+  min-height: 400px;
+  position: relative;
+}
+#ca1.owl-carousel .item > .container {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#ca1.owl-carousel .item1 {
+  background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
+    url("../image/Banner1.webp") center/cover no-repeat;
+}
+#ca1.owl-carousel .item2 {
+  background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
+    url("../image/Banner2.webp") center/cover no-repeat;
+}
+#ca1.owl-carousel .item3 {
+  background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
+    url("../image/Banner3.webp") center/cover no-repeat;
+}
+.astroBanner #ca1.owl-carousel .item1 {
+  background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
+    url("../image/AstrobannBack.webp") center/cover no-repeat;
+}
+.astroBanner #ca1.owl-carousel .item2 {
+  background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
+    url("../image/AstrobannBack.webp") center/cover no-repeat;
+}
+.astroBanner #ca1.owl-carousel .item3 {
+  background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
+    url("../image/AstrobannBack.webp") center/cover no-repeat;
+}
+.experienceText .secH{
+color: #ffffff;
+}
+
+.bannertext1 {
+  border-radius: 25px;
+  text-align: center;
+}
+.astroBanner .bannertext1 {
+  text-align: left;
+}
+
+.Banner .btnoutline{
+    color: var(--fade);
+    border: 2px solid var(--fade);
+}
+.Banner .btnoutline:hover{
+  color: #ffffff;
+}
+
+.bannertext1 .display-2{
+  color: #ffffff;
+}
+
+.bannertext1 {
+  color: #fff;
+}
+
+#ca1 .owl-item.active .bannerCard {
+  animation: 1s 0.5s both animate__fadeInUp;
+}
+@keyframes animate__fadeInUp {
+  0% {
+    -webkit-transform: translateY(200px);
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* new Footer start */
+.footer{
+  color: #ffffff;
+  background: linear-gradient(140deg, #1283c6 -40%, #6b57a5 50%);
+}
+.footerBrandLogo{
+  display: table;
+  margin: auto;
+  width: 18%;
+  min-width: 150px;
+}
+.socialIons{
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.socialIons a{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 24px;
+  border: 2px solid #ffffff;
+  isolation: isolate;
+}
+.socialIons a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  scale: 0%;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  transition: scale 0.3s ease-in-out;
+  z-index: -1;
+}
+.socialIons a:hover::after{
+scale: 86%;
+}
+.callLinkwrap{
+  display: flex;
+  gap: 16px 16px;
+}
+.footConIcon{
+      flex: 0 0 auto;
+    width: auto;
+}
+.footConText{
+      flex: 1 0 0%;
+}
+.footerPageLinks{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  padding: 16px 0;
+  margin-top: 16px;
+  border: 2px solid var(--fade);
+  border-left: 0;
+  border-right: 0;
+}
+.footerPageLinks a{
+  display: inline-block;
+  padding: 8px;
+  font-weight: 600;
+}
+.footerLinkHover{
+  color: #ffffff;
+  text-shadow: 0px 1px 2px #1d1d1d00, 0px 3px 2px #1d1d1d00, 0px 4px 8px #1d1d1d00;
+  transition: text-shadow 0.3s ease-in-out;
+}
+.footerLinkHover:hover{
+  color: #ffffff;
+  text-shadow: 0px 1px 4px #1d1d1d62, 0px 3px 4px #1d1d1d62, 0px 4px 8px #1d1d1d62;
+}
+.f-bottom {
+  padding: 12px 0;
+}
+/* new Footer end */
+
+
+.Call-fab-container,
+.fab-container {
+  position: fixed;
+  right: 24px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+
+.defaultPadding{
+  padding: 80px 0;
+}
+
+.fab-container {
+  bottom: 24px;
+}
+.Call-fab-container {
+  bottom: 94px;
+}
+
+
+.btnoutline{
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 100px;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  transition: color 0.3s ease-in-out, scale 0.1s ease-in-out;
+}
+.btnoutline svg{
+  margin-top: -4px;
+  margin-right: 8px;
+}
+
+.btnoutline:hover{
+  color: var(--black);
+}
+
+.btnoutline:active{
+  scale: 0.95;
+}
+
+.timingPost{
+  text-align: center;
+}
+
+.timingPost .container>.row{
+  row-gap: 24px;
+}
+
+/* statistics section start */
+.iconStatis{
+  height: 64px;
+  width: 64px;
+}
+.statisNumb .therdH{
+  font-family: 'TAN - PEARL';
+  margin-bottom: 0;
+}
+.statisticsSection {
+  color: #ffffff;
+  background: linear-gradient(to right,#8e2de2d4, #5e1c99d4), url('../image/StatisticsBack.webp') center/cover no-repeat;
+}
+.statisticsSection .container>.row{
+  row-gap: 24px;
+}
+/* statistics section end */
+
+
+/* Yoga Offerings section start */
+.yogaOfferings{
+  text-align: center;
+  background-color: var(--lightBg);
+}
+.yogaOfferings .container>.row{
+  row-gap: 24px;
+}
+.imgService{
+  position: relative;
+}
+.infoService{
+  position: relative;
+  padding-bottom: 55px;
+}
+.serviceTag{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 8px 12px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: var(--secondary-color);
+  color: #ffffff;
+}
+.cicleAnchor{
+  display: inline-block;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  padding: 10px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  overflow: hidden;
+  isolation: isolate;
+  color: var(--primary-color);
+}
+.cicleAnchor::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 100%;
+  border: 2px dashed var(--secondary-color);
+  z-index: -1;
+  animation: circleMotion 10s  both infinite linear;
+
+}
+@keyframes circleMotion {
+  0%{
+    rotate: 0deg;
+  }
+  100%{
+    rotate: 360deg;
+  }
+}
+
+.infoService p{
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+.serviceCard{
+  position: relative;
+  background-color: #ffffff;
+  text-align: left;
+  text-transform: capitalize;
+  height: 100%;
+  border: 1px solid #00000013;
+  padding: 12px 12px;
+  border-radius: 8px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+/* Yoga Offerings section end */
+
+
+/* testimonial Section start */
+.ReviewText .therdH{
+color: var(--secondary-color);
+font-weight: bold;
+}
+.ReviewText p.fourthH{
+font-weight: 400;
+}
+.testimonialSection .row{
+  row-gap: 24px;
+}
+.testiImgWrap{
+  background: url('../image/testiImgBorder.webp') center/cover no-repeat;
+  padding: 20%;
+}
+.memberName{
+  color: var(--primary-color);
+}
+.testiImgWrap img{
+border-radius: 50%;
+}
+#testimonials.owl-carousel {
+  position: relative;
+  padding-bottom: 34px;
+}
+#testimonials.owl-carousel .owl-dots{
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+display: flex;
+gap: 8px;
+justify-content: center;
+}
+#testimonials.owl-carousel .owl-dot span{
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: var(--fade);
+}
+#testimonials.owl-carousel .owl-dot.active span{
+  background-color: var(--primary-color);
+}
+/* testimonial Section end */
+
+
+.newBanner{
+  padding: 120px 0;
+  background: url('../image/NewBanner.webp') right/cover no-repeat;
+}
+
+.newBanner .display-2{
+color: #ffffff;
+text-align: center;
+margin-bottom: 0;
+}
+
+
+.ContactForm .modal-header {
+  justify-content: center;
+  position: relative;
+}
+.ContactForm .modal-header .btn-close {
+  margin: 0 !important;
+  position: absolute;
+  right: 14px;
+  top: 14px;
+}
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.option {
+  border: none;
+  background: 0 0;
+  cursor: pointer;
+}
+.portfolio-item,
+.spotlight {
+  border: 2px solid var(--lightPink);
+}
+.option img {
+  width: 50px;
+  height: 50px;
+}
+
+.formSection img{
+  border-radius: 12px;
+}
+
+.form-label{
+  margin-top: 16px;
+  color: var(--primary-color);
+}
+
+.form-control{
+  border: none;
+  box-shadow: #6956a433  0px 1px 0px, #6956a433  0px 8px 24px, #6956a433  0px 16px 48px;
+}
+textarea.form-control{
+  resize: none;
+}
+
+.form-control:focus {
+    background-color: #fff;
+    border-color: #86b7fe;
+    box-shadow: #6956a466 0px 1px 0px, #6956a466  0px 8px 24px, #6956a466  0px 16px 48px;
+  }
+  
+  
+  .form-control.is-invalid:focus, .was-validated .form-control:invalid:focus {
+  box-shadow: rgba(220, 53, 69, .25) 0px 1px 0px, rgba(220, 53, 69, .25)  0px 8px 24px, rgba(220, 53, 69, .25)  0px 16px 48px;
+}
+
+.form-control.is-valid:focus, .was-validated .form-control:valid:focus{
+  box-shadow: rgba(25, 135, 84, .25) 0px 1px 0px, rgba(25, 135, 84, .25)  0px 8px 24px, rgba(25, 135, 84, .25)  0px 16px 48px;
+}
+.formSection .container>.row{
+  row-gap: 40px;
+}
+
+.mapSection iframe{
+min-height: 500px;
+margin-bottom: -8px;
+}
+
+
+/* astrology welcome section start */
+.experienceText .fourthH{
+max-width: 175px;
+}
+.astrologyWelcome{
+  background: url('../image/AstrobannBack.webp') center/cover no-repeat;
+  color: #ffffff;
+}
+.astrologyWelcome .secH{
+  color: #ffffff;
+}
+/* astrology welcome section end */
+
+
+/* astrology Services start */
+.astroServiceCard{
+  position: relative;
+  height: 100%;
+  text-align: center;
+  padding: 12px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.astroicon{
+  width: 100px;
+  margin: auto;
+  margin-bottom: 16px;
+}
+.astrologyServices .container>.row{
+  row-gap: 24px;
+}
+.astrocardText {
+  color: var(--primary-color);
+}
+.astrocardText p{
+  color: var(--secondary-color);
+}
+
+
+.astroServiceCard a{
+  color: var(--primary-color);
+  font-weight: bold;
+}
+.astroServiceCard .absAnchor{
+  position: absolute;
+  inset: 0;
+}
+
+.astroServiceCard:hover{
+  background: url('../image/serviceCardBack.webp') center/cover no-repeat;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+.astroServiceCard:hover .astrocardText{
+  color: #ffffff;
+}
+.astroServiceCard:hover .astrocardText p,.astroServiceCard:hover a{
+  color: #ffffff;
+}
+/* astrology Services end */
+
+
+/* राशि section start */
+.rashiSection{
+  background-color: var(--lightBg);
+}
+.rashiSection .container>.row{
+  row-gap: 24px;
+}
+.ZodiacCards {
+  text-align: center;
+  background-color: var(--fade);
+  padding: 12px;
+  color: var(--primary-color);
+}
+.birthDates{
+  padding: 8px;
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+  color: #ffffff;
+}
+/* राशि section end */
+
+
+/* Vastu for Your Space start */
+.maxPara{
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+.ulStyles{
+  font-size: 18px;
+}
+.ulStyles li::marker {
+    color: var(--secondary-color);
+}
+.VastuForYourSpace .container>.row{
+  align-items: center;
+  row-gap: 24px;
+}
+/* Vastu for Your Space end */
+
+/* Explore Vastu section start */
+.exploreVastu {
+  background: linear-gradient(#8d2de2c4,#8d2de2c4), url('../image/exploreVastuBack.webp') no-repeat center;
+  background-size: cover,cover;
+  color: #ffffff;
+}
+.exploreVastu  .secH{
+  color: #ffffff;
+}
+.exloreVastuCards{
+  text-align: center;
+}
+.exploreVastu .container>.row{
+  row-gap: 24px;
+}
+/* Explore Vastu section end */
+
+/* Why Vastu section start */
+.whyVastu .therdH{
+  color: var(--primary-color);
+}
+.whyVastu .container>.row{
+  row-gap: 24px;
+}
+
+/* Why Vastu section end */
+
+/* Enhancing Mental Health section start */
+.enhancingMentalHealth .ulStyles li{
+  margin-top: 8px;
+}
+.enhancingMentalHealth .container>.row{
+  row-gap: 24px;
+}
+.enhancingMentalHealth img{
+  border-radius: 8px;
+}
+.enhancingMentalHealth .therdH{
+  color: var(--primary-color);
+}
+.bigPara{
+  font-size: 28px;
+}
+
+.btn-purple {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 25px;
+}
+.btn-purple:hover {
+  background-color: #5e3274;
+  color: #fff;
+}
+
+.meditationSessionCard .fourthH{
+  color: var(--primary-color);
+}
+.meditationSessionCard p{
+  color: var(--black);
+}
+
+
+/* Enhancing Mental Health section end */
+
+/* What Science Says start */
+.scienceSection{
+  padding: 16px;
+  background: linear-gradient(#8d2de29c,#8d2de29c), url('../image/whatScienceSay.webp') no-repeat center;
+  background-size: cover,cover;
+  color: #ffffff;
+  border-radius: 8px;
+}
+.whatScienceSay{
+  background: linear-gradient(#0000009c,#0000009c), url('../image/Banner3.webp') no-repeat center;
+  background-size: cover,cover;
+  color: #ffffff;
+}
+.whatScienceSay .container>.row{
+  row-gap: 24px;
+  align-items: center;
+}
+.scienceSection .secH{
+  color: #ffffff;
+}
+.typescard .fifthH{
+  margin-top: 8px;
+}
+.typesYogaRow{
+  row-gap: 24px;
+}
+/* What Science Says end */
+
+/* Expert Tips for Mental Wellness section start */
+.expertTips .container>.row{
+  row-gap: 24px;
+}
+.expertTips img{
+  border-radius: 8px;
+}
+/* Expert Tips for Mental Wellness section end */
+
+
+/* ayurvedic treatment list start */
+
+.ayurvedicTreatmentList table {
+  border-collapse: collapse;
+  color: #000000;
+  position: relative;
+  width: 100%;
+}
+.ayurvedicTreatmentList .tableWrapper {
+  overflow-y: auto; /* Enable vertical scrolling */
+  border: 1px solid #ddd; /* Optional: Adds a visible border for clarity */
+}
+
+.ayurvedicTreatmentList th, 
+.ayurvedicTreatmentList td {
+  text-align: left;
+  vertical-align: text-top;
+  padding: 8px;
+}
+
+
+.ayurvedicTreatmentList th:first-of-type {
+  position: sticky;
+  left: 0;
+  z-index: 2; /* Makes the first column appear above other content */
+  max-width: 270px;
+  min-width: 182px;
+}
+
+.ayurvedicTreatmentList table tr:nth-child(even)> th{
+    background-color: #ded0ee;
+}
+.ayurvedicTreatmentList table tr:nth-child(odd)> th{
+    background-color: #ffffff;
+}
+
+.ayurvedicTreatmentList table tr.fst_Table>th {
+  position: sticky;
+  top: 0;
+  color: #ffffff;
+  background-color: var(--primary-color);
+  z-index: 3; /* Ensures the header row appears above everything else */
+}
+
+.ayurvedicTreatmentList .fst_Table .fst_TH {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-color); /* Ensures the top-left corner stays consistent */
+  z-index: 4; /* Highest z-index to prevent conflicts */
+}
+
+.ayurvedicTreatmentList tr:nth-child(even) {
+  background-color: #ded0ee;
+}
+
+/* All Types of Tensile Fabric table section end */
+
+/* ayurveda Book appointment  section start */
+.enhancingMentalHealth.ayurvedaPage0 .form-select{
+  border: none;
+  box-shadow: #6956a433 0px 1px 0px, #6956a433 0px 8px 24px, #6956a433 0px 16px 48px; 
+}
+.enhancingMentalHealth.ayurvedaPage0{
+  background: linear-gradient(#00000093, #00000093) 0 0 / cover, url(../image/AyurvedaAppointment.webp) center / cover no-repeat;
+  color: #ffffff;
+}
+.enhancingMentalHealth.ayurvedaPage0 .secH{
+  color: #ffffff;
+}
+.enhancingMentalHealth.ayurvedaPage0 .formPart{
+  background-color: var(--extraLight);
+  color: #000000;
+  padding: 20px;
+}
+
+.enhancingMentalHealth .formPart .fourthH{
+ font-family: 'TAN - PEARL', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ color: var(--primary-color);
+ font-size: 17px;
+}
+.form-select.is-invalid:focus, .was-validated .form-select:invalid:focus{
+    box-shadow: rgba(220, 53, 69, .25) 0px 1px 0px, rgba(220, 53, 69, .25) 0px 8px 24px, rgba(220, 53, 69, .25) 0px 16px 48px;
+}
+.form-select.is-valid:focus, .was-validated .form-select:valid:focus{
+    box-shadow: rgba(25, 135, 84, .25) 0px 1px 0px, rgba(25, 135, 84, .25) 0px 8px 24px, rgba(25, 135, 84, .25) 0px 16px 48px;
+}
+/* ayurveda Book appointment  section end */
+
+/* Treatments offered section start */
+.TreatmentsOffered {
+  background-color: var(--lightBg);
+}
+.TreatmentsOffered h2.therdH{
+  color: var(--primary-color);
+}
+.TreatmentsOffered .container>.row{
+  row-gap: 24px;
+}
+.UlStyleUI{
+  padding: 0;
+  margin: 0;
+  margin-top: 8px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 4px;
+  justify-content: space-between;
+}
+.UlStyleUI li{
+  display: inline-block;
+  width: 49%;
+}
+.UlStyleUI li a{
+  color: var(--accentColour);
+  transition: color 0.3s ease-in-out;
+  font-weight: 600;
+}
+.UlStyleUI li a:hover{
+  color: var(--primary-color);
+}
+.UlStyleUI li a i{
+  color: var(--primary-color);
+}
+/* Treatments offered section end */
+
+
+/* Treatment Philosophy start */
+.handWriting{
+  font-family: 'Gabriola', 'MV Boli', 'Snell Roundhand', 'Apple Chancery', cursive;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #3a3a3a;
+  background-color: #fefaf3;
+  padding: 1rem 2rem;
+  border-left: 4px solid #8bc34a;
+}
+.treatmentPhilosophy .container>.row{
+  row-gap: 24px;
+  align-items: center;
+}
+/* Treatment Philosophy end */
+
+/* Science of Ayurveda section start */
+.ScienceOfAyurveda{
+background: linear-gradient(#00000073, #00000073) 0 0 / cover, url('../image/ScienceOfAyurveda.webp') right / cover no-repeat;
+color: #ffffff;
+}
+.ScienceOfAyurveda .secH{
+  color: #ffffff;
+}
+.ScienceOfAyurveda .fourthH{
+  text-align: justify;
+}
+
+/* Science of Ayurveda section end */
+
+/* Body types as per Ayurveda Section start */
+.maxPara{
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+.BodyTypeCard{
+  text-align: center;
+}
+.BodyTypeCard .fourthH{
+  margin-top: 12px;
+}
+.BodyTypesAyurveda .container>.row{
+  row-gap: 24px;
+}
+
+/* Body types as per Ayurveda Section end */
+
+
+/* FAQs Panchkarma section start */
+.FAQsPanchkarma .therdH {
+  color: var(--primary-color);
+  margin-bottom: 40px;
+}
+
+
+.accordion-button {
+    background-color: var(--fade);
+}
+.accordion-body{
+  background-color: var(--lightBg);
+}
+
+.accordion-button:not(.collapsed) {
+    color: #ffffff;
+    background-color: var(--primary-color);
+}
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url('../image/accordion-arrow-down.svg');
+}
+
+
+/* FAQs Panchkarma section end */
+
+/* Benefits of Panchakarma section start */
+.benefitOfPanchakarma{
+  background: linear-gradient(#00000083, #00000083) 0 0 / cover, url('../image/BenefitsofBack.webp') right / cover no-repeat;
+  color: #ffffff;
+}
+.benefitOfPanchakarma .secH{
+  color: #ffffff;
+}
+.benefitOfPanchakarma .container>.row{
+  row-gap: 24px;
+}
+/* Benefits of Panchakarma section end */
+
+/* History of Panchakarma Therapy section start */
+.historyOfPanchakarma img{
+  border-radius: 8px;
+}
+.historyOfPanchakarma .container>.row{
+  row-gap: 24px;
+  align-items: center;
+}
+.historyOfPanchakarma .therdH {
+  color: var(--primary-color);
+  margin-bottom: 40px;
+}
+/* History of Panchakarma Therapy section end */
+
+/* Panchakarma infertility treatment section start */
+.panchakarmaInfertilityTreatment .container>.row{
+  row-gap: 24px;
+  align-items: center;
+}
+.panchakarmaInfertilityTreatment img{
+  border-radius: 8px;
+}
+.panchakarmaInfertilityTreatment .therdH {
+  color: var(--primary-color);
+  margin-bottom: 40px;
+}
+/* Panchakarma infertility treatment section end */
+
+/* Who Should Avoid Panchakarma start */
+.whoShouldAvoidPanchakarma .container>.row{
+  row-gap: 24px;
+  align-items: center;
+}
+.whoShouldAvoidPanchakarma img{
+  border-radius: 8px;
+}
+.whoShouldAvoidPanchakarma .therdH {
+  color: var(--primary-color);
+  margin-bottom: 40px;
+}
+/* Who Should Avoid Panchakarma end */
+
+.tab-content{
+  flex: 1 0 0%;
+}
+
+.nav {
+  row-gap: 8px;
+}
+
+.nav-pills .nav-link {
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 100px;
+  background-color: #8d2de200;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #ffffff;
+    background-color: var(--primary-color);
+}
+
+.nav-pills .nav-link:not(.active):hover {
+  color: var(--black);
+}
+.tabSectionAyurveda .tab-content .therdH {
+  color: var(--primary-color);
+}
+
+
+.yogaOfferings.YogaPage0 {
+  background: #ffffff;
+}
+
+
+/* service sub pages start */
+.quoteSection {
+    background: var(--accentColour);
+    color: #ffffff;
+}
+
+.extraDescription{
+   background: var(--lightBg);
+}
+
+.serviceDescription{
+  background: url('../image/ServicePageBack.webp') center/cover no-repeat;
+}
+.serviceDescription img{
+  border-radius: 16px;
+}
+.serviceDescription  .container>.row{
+  row-gap: 24px;
+}
+
+.descriptionPart{
+  background-color: #e9c9fce3;
+  padding: 12px;
+  border-radius: 16px;
+}
+
+/* service sub pages end */
+
+
+.formSection .formPart{
+  padding: 100px 80px;
+  background: url('../image/FormBackServices.jpg') center/cover no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+}
+.formSection .ContactForm{
+  position: relative;
+  isolation: isolate;
+}
+.formSection .ContactForm::before{
+  content: "";
+  position: absolute;
+  height: calc(100% + 44px);
+  width: calc(100% + 20px);
+  backdrop-filter: blur(2px);
+  background-color: #eedffa7a;
+  border: 1px solid #ffffff9f;
+  border-radius: 16px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
+}
+
+.form-label{
+  margin-top: 16px;
+  color: var(--primary-color);
+}
+.formSection .col-12:first-child .form-label{
+  margin-top: 0;
+}
+
+.form-control{
+  border: none;
+  box-shadow: #c9a3e2 0px 1px 0px, #d9cde7 0px 4px 12px, #ddc6e7 0px 8px 18px;
+}
+textarea.form-control{
+  resize: none;
+}
+.form-control:not(textarea.form-control){
+  height: 46px;
+}
+
+.form-control:focus {
+    background-color: #fff;
+    box-shadow: #e2c0f5 0px 1px 0px, #bb99cf  0px 8px 24px, #cda8e2  0px 16px 48px;
+  }
+
+.form-select{
+  border: none;
+  height: 46px;
+  box-shadow: #e2c0f5  0px 1px 0px, #bb99cf   0px 4px 12px, #cda8e2 0px 8px 18px;
+}
+.form-select option:disabled{
+  background-color: var(--accentColour);
+  color: #ffffff;
+}
+
+
+
+
+.form-select:focus {
+    outline: 0;
+    box-shadow: #e2c0f5 0px 1px 0px, #bb99cf  0px 8px 24px, #cda8e2  0px 16px 48px;
+}
+
+.form-select.is-invalid:focus, .was-validated .form-select:invalid:focus{
+    box-shadow: rgba(220, 53, 69, .25) 0px 1px 0px, rgba(220, 53, 69, .25) 0px 8px 24px, rgba(220, 53, 69, .25) 0px 16px 48px;
+}
+.form-select.is-valid:focus, .was-validated .form-select:valid:focus{
+    box-shadow: rgba(25, 135, 84, .25) 0px 1px 0px, rgba(25, 135, 84, .25) 0px 8px 24px, rgba(25, 135, 84, .25) 0px 16px 48px;
+}
+  
+  .form-control.is-invalid:focus, .was-validated .form-control:invalid:focus {
+  box-shadow: rgba(220, 53, 69, .25) 0px 1px 0px, rgba(220, 53, 69, .25)  0px 8px 24px, rgba(220, 53, 69, .25)  0px 16px 48px;
+}
+
+.form-control.is-valid:focus, .was-validated .form-control:valid:focus{
+  box-shadow: rgba(25, 135, 84, .25) 0px 1px 0px, rgba(25, 135, 84, .25)  0px 8px 24px, rgba(25, 135, 84, .25)  0px 16px 48px;
+}
+.formSection .container>.row{
+  row-gap: 40px;
+}
+

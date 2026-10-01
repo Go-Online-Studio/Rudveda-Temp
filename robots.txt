@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rudvedathehealingcenter.com/sitemap.xml
