@@ -1,15 +1,17 @@
 // WhatsApp URL Adjuster (Responsive)
 (function () {
   const whatsappLinks = [
-    "https://web.whatsapp.com/send?phone=919429184432",
-    "https://api.whatsapp.com/send?phone=919429184432"
+    "https://web.whatsapp.com/send?phone=919773103409",
+    "https://api.whatsapp.com/send?phone=919773103409",
   ];
 
   function updateWhatsAppLink() {
     const isMobile = window.innerWidth <= 767.98;
-    document.querySelectorAll(".set-url-target").forEach(el =>
-      el.setAttribute("href", whatsappLinks[isMobile ? 1 : 0])
-    );
+    document
+      .querySelectorAll(".set-url-target")
+      .forEach((el) =>
+        el.setAttribute("href", whatsappLinks[isMobile ? 1 : 0]),
+      );
   }
 
   let resizeTimer;
@@ -33,7 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Load Header and Footer
 function loadHeaderFooter(callback) {
-  document.getElementById("header").innerHTML = `  <nav class="mynavbar bg-light">
+  document.getElementById("header").innerHTML =
+    `  <nav class="mynavbar bg-light">
               <div class="container-fluid header">
                 <a class="brandLogo" href="index.html">
                   <img src="image/RudvedaLogo.webp" alt="Rudveda Logo">
@@ -47,14 +50,14 @@ function loadHeaderFooter(callback) {
                   </li>
                   <li class="navLi"><a class="navLink" href="index.html">Home</a></li>
                   <li class="navLi"><a class="navLink" href="karmakand.html">Karmakand</a></li>
+                  <li class="navLi"><a class="navLink" href="astrology.html">Astrology</a></li>
+                  <li class="navLi"><a class="navLink" href="vastu.html">Vastu</a></li>
                   <li class="navLi"><a class="navLink" href="Yoga.html">Yoga</a></li>
                   <li class="navLi"><a class="navLink" href="ayurveda.html">Ayurveda</a></li>
                   <li class="navLi"><a class="navLink" href="panchkarma.html">Panchkarma</a></li>
-                  <li class="navLi"><a class="navLink" href="astrology.html">Astrology</a></li>
                   <li class="navLi"><a class="navLink" href="mentalHealthAyurveda.html">Mental Health</a></li>
-                  <li class="navLi"><a href="vastu.html" class="navLink">Vastu</a></li>
-                  <li class="navLi"><a href="gurukulSanskar.html" class="navLink">Gurukul Sanskar</a></li>
-                  <li class="navLi"><a href="contact.html" class="navLink">Contact</a></li>
+                  <li class="navLi"><a class="navLink" href="gurukulSanskar.html">Gurukul Sanskar</a></li>
+                  <li class="navLi"><a class="navLink" href="contact.html">Contact</a></li>
                 </ul>
               </div>
             </nav>
@@ -78,7 +81,7 @@ function loadHeaderFooter(callback) {
                       </div>
                       <div class="footConText">
                         <h5 class="fifthH">Call Us</h5>
-                        <a class="footerLinkHover" target="_blank" href="tel:+919429184432"> +91 94291 84432</a>
+                        <a class="footerLinkHover" target="_blank" href="tel:+919773103409"> +91 97731 03409</a>
                        
                       </div>
                     </div>
@@ -134,13 +137,19 @@ function loadHeaderFooter(callback) {
 
 // Highlight current page in navbar
 function highlightActiveLink() {
-  const current = (window.location.pathname.split("/").pop() || "index.html").split("?")[0];
-  document.querySelectorAll(".navLink").forEach(link => {
+  const current = (
+    window.location.pathname.split("/").pop() || "index.html"
+  ).split("?")[0];
+  document.querySelectorAll(".navLink").forEach((link) => {
     const href = link.getAttribute("href")?.split("?")[0];
     if (!href || href === "#") return;
     if (href === current) {
       link.classList.add("active");
-      link.closest(".dropdownList")?.closest(".navLi")?.querySelector(".navLink")?.classList.add("active");
+      link
+        .closest(".dropdownList")
+        ?.closest(".navLi")
+        ?.querySelector(".navLink")
+        ?.classList.add("active");
     }
   });
 }
@@ -174,16 +183,18 @@ function initMobileNavToggle() {
   const navMenu = document.querySelector(".navMenu");
   const closeBtn = document.querySelector(".btn-nav-close");
 
-  toggleBtn?.addEventListener("click", () => navMenu.classList.toggle("active"));
+  toggleBtn?.addEventListener("click", () =>
+    navMenu.classList.toggle("active"),
+  );
   closeBtn?.addEventListener("click", () => navMenu.classList.remove("active"));
 
-  document.querySelectorAll(".toggleSub").forEach(toggle => {
-    toggle.addEventListener("click", e => {
+  document.querySelectorAll(".toggleSub").forEach((toggle) => {
+    toggle.addEventListener("click", (e) => {
       e.preventDefault();
       const submenu = toggle.closest(".navLi").querySelector(".dropdownList");
 
       // Close all others
-      document.querySelectorAll(".dropdownList.open").forEach(menu => {
+      document.querySelectorAll(".dropdownList.open").forEach((menu) => {
         if (menu !== submenu) menu.classList.remove("open");
       });
 
@@ -191,6 +202,3 @@ function initMobileNavToggle() {
     });
   });
 }
-
-
- 

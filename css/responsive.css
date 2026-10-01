@@ -51,15 +51,15 @@
 @media (max-width: 1024.98px) {
   #ca1.owl-carousel .item1 {
   background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
-    url("./image/Banner1_Mobile.webp") center/cover no-repeat;
+    url("../image/Banner1_Mobile.webp") center/cover no-repeat;
 }
 #ca1.owl-carousel .item2 {
   background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
-    url("./image/Banner2_Mobile.webp") center/cover no-repeat;
+    url("../image/Banner2_Mobile.webp") center/cover no-repeat;
 }
 #ca1.owl-carousel .item3 {
   background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
-    url("./image/Banner3_Mobile.webp") center/cover no-repeat;
+    url("../image/Banner3_Mobile.webp") center/cover no-repeat;
 }
 
 .navLink {
