@@ -1,29 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-@font-face {
-  font-family: 'Libre Franklin';
-  src: url('../fonts/LibreFranklin-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 
-@font-face {
-  font-family: 'Libre Franklin';
-  src: url('../fonts/LibreFranklin-Bold.woff2') format('woff2'),
-      url('../fonts/LibreFranklin-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
 
-@font-face {
-  font-family: 'TAN - PEARL';
-  src: url('../fonts/TAN-PEARL-Regular.woff2') format('woff2'),
-      url('../fonts/TAN-PEARL-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+
+
+
 
 
 html {
@@ -64,7 +45,7 @@ html {
   box-sizing: border-box;
 }
 body {
-  font-family: 'Libre Franklin';
+  font-family: 'Poppins', sans-serif;
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -78,7 +59,7 @@ img {
 }
 
 .display-2 {
-  font-family: 'TAN - PEARL';
+  font-family: 'Poppins', sans-serif;
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -89,7 +70,7 @@ img {
 
 
 .secH {
-  font-family: 'TAN - PEARL';
+  font-family: 'Poppins', sans-serif;
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -99,7 +80,7 @@ img {
   color: var(--primary-color);
 }
 .therdH {
-  font-family: 'TAN - PEARL';
+  font-family: 'Poppins', sans-serif;
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -111,7 +92,7 @@ img {
 
 
 .fourthH {
-  font-family: 'Libre Franklin';
+  font-family: 'Poppins', sans-serif;
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -119,7 +100,7 @@ img {
   line-height: 30px;
 }
 .fifthH {
-  font-family: 'Libre Franklin';
+  font-family: 'Poppins', sans-serif;
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -173,7 +154,7 @@ img {
 }
 
 .navLink {
-  font-family: 'Libre Franklin';
+  font-family: 'Poppins', sans-serif;
   text-decoration: none;
   color: var(--accentColour);
   font-size: 16px;
@@ -665,7 +646,7 @@ scale: 86%;
   width: 64px;
 }
 .statisNumb .therdH{
-  font-family: 'TAN - PEARL';
+  font-family: 'Poppins', sans-serif;
   margin-bottom: 0;
 }
 .statisticsSection {
@@ -1166,7 +1147,7 @@ max-width: 175px;
 }
 
 .enhancingMentalHealth .formPart .fourthH{
- font-family: 'TAN - PEARL', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ font-family: 'Poppins', sans-serif, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
  color: var(--primary-color);
  font-size: 17px;
 }
@@ -1499,4 +1480,6 @@ textarea.form-control{
 .formSection .container>.row{
   row-gap: 40px;
 }
+
+
 
