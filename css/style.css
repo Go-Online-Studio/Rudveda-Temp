@@ -436,27 +436,23 @@ img {
 }
 #ca1.owl-carousel .item1 {
   background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
-    url("../image/01.webp") center/cover no-repeat;
+    url("../image/01.avif") center/cover no-repeat;
 }
 #ca1.owl-carousel .item2 {
   background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
-    url("../image/02.webp") center/cover no-repeat;
+    url("../image/02.avif") center/cover no-repeat;
 }
 #ca1.owl-carousel .item3 {
   background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
-    url("../image/03.webp") center/cover no-repeat;
+    url("../image/03.avif") center/cover no-repeat;
 }
 #ca1.owl-carousel .item4 {
   background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
-    url("../image/04.webp") center/cover no-repeat;
+    url("../image/04.avif") center/cover no-repeat;
 }
 #ca1.owl-carousel .item5 {
   background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
-    url("../image/05.webp") center/cover no-repeat;
-}
-#ca1.owl-carousel .item6 {
-  background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
-    url("../image/06.webp") center/cover no-repeat;
+    url("../image/05.avif") center/cover no-repeat;
 }
 .astroBanner #ca1.owl-carousel .item1 {
   background: linear-gradient(#0000008c, #0000008c) 0 0 / cover,
